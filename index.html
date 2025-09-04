@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FREEBORN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: url('stars-bg.jpg') repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    .parallax {
+      background: url('stars-bg.jpg') repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body class="text-white font-sans">
+  <!-- Hero -->
+  <section class="h-screen flex flex-col justify-center items-center parallax text-center">
+    <h1 class="text-5xl md:text-7xl font-bold mb-6">Choose free. Choose you.</h1>
+    <a href="#form" class="px-6 py-3 bg-teal-500 hover:bg-teal-600 rounded-2xl text-lg transition">
+      Wybierz siebie. Zostaw swój kontakt.
+    </a>
+  </section>
+
+  <!-- Jak to działa + licznik -->
+  <section class="py-20 bg-black bg-opacity-70 text-center">
+    <h2 class="text-4xl font-bold mb-8">Jak to działa?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
+      <div><h3 class="text-2xl mb-2">1</h3><p>Wybierz wyzwanie</p></div>
+      <div><h3 class="text-2xl mb-2">2</h3><p>Przeżyj przygodę</p></div>
+      <div><h3 class="text-2xl mb-2">3</h3><p>Podziel się historią</p></div>
+    </div>
+    <div class="mt-10 text-2xl">
+      Dostępnych miejsc: <span id="spots" class="font-bold text-teal-400">20</span>
+    </div>
+    <button onclick="joinNow()" class="mt-4 px-6 py-2 bg-teal-500 hover:bg-teal-600 rounded-xl">Dołącz</button>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 px-6 bg-gray-900">
+    <h2 class="text-4xl font-bold text-center mb-10">FAQ</h2>
+    <div class="max-w-3xl mx-auto space-y-4">
+      <details class="bg-gray-800 p-4 rounded-xl">
+        <summary class="cursor-pointer font-semibold">Czy muszę być wysportowany?</summary>
+        <p class="mt-2">Nie – wystarczy chęć przeżycia przygody.</p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-xl">
+        <summary class="cursor-pointer font-semibold">Czy muszę mieć swój sprzęt survivalowy?</summary>
+        <p class="mt-2">Podstawowy sprzęt zapewniamy, ale własny zawsze mile widziany.</p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-xl">
+        <summary class="cursor-pointer font-semibold">Czy trzeba mieć doświadczenie w survivalu?</summary>
+        <p class="mt-2">Nie – dla każdego znajdzie się poziom wyzwania.</p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-xl">
+        <summary class="cursor-pointer font-semibold">Czy to bezpieczne?</summary>
+        <p class="mt-2">Tak, wszystkie przygody są organizowane z zachowaniem bezpieczeństwa.</p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-xl">
+        <summary class="cursor-pointer font-semibold">Dlaczego nie podajecie ceny od razu?</summary>
+        <p class="mt-2">Bo FREEBORN to więcej niż cena – to doświadczenie. Szczegóły poznasz po dołączeniu.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Formularz -->
+  <section id="form" class="py-20 bg-black bg-opacity-70 text-center">
+    <h2 class="text-4xl font-bold mb-8">Dołącz</h2>
+    <div class="max-w-3xl mx-auto">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdHFRDKskzT244qEXUTXhnoJY7pZyyfxzhbptC85SVYZqovog/viewform?embedded=true" width="640" height="721" frameborder="0" marginheight="0" marginwidth="0" class="w-full">Ładuję…</iframe>
+    </div>
+  </section>
+
+  <!-- Stopka -->
+  <footer class="py-6 bg-gray-900 text-center text-gray-400">
+    <p>© 2025 FREEBORN</p>
+  </footer>
+
+  <script>
+    let spots = 20;
+    function joinNow() {
+      if (spots > 0) {
+        spots--;
+        document.getElementById('spots').innerText = spots;
+      }
+    }
+  </script>
+</body>
+</html>
