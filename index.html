@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FREEBORN</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      background: #000;
+      overflow-x: hidden;
+    }
+    .parallax {
+      background-image: url('assets/stars.jpg');
+      height: 100vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .logo img {
+      max-width: 220px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin: 20px 0;
+    }
+    .btn {
+      background: #00aaff;
+      color: white;
+      padding: 12px 28px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 40px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #0088cc;
+    }
+    section {
+      background: rgba(0,0,0,0.75);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: #00aaff;
+    }
+    .faq-item {
+      margin: 15px 0;
+    }
+    .hidden-form {
+      display: none;
+      margin-top: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 720px;
+      border: none;
+      border-radius: 10px;
+      filter: invert(1) hue-rotate(180deg) contrast(0.9);
+    }
+    footer {
+      background: rgba(0,0,0,0.85);
+      padding: 20px;
+      text-align: center;
+    }
+    footer a {
+      margin: 0 10px;
+      color: #00aaff;
+      font-size: 1.5em;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="parallax">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Freeborn Logo">
+    </div>
+    <h1>Choose free. Choose you.</h1>
+    <button class="btn" onclick="toggleForm()">Wybierz siebie</button>
+    <div id="form-container" class="hidden-form">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdHFRDKskzT244qEXUTXhnoJY7pZyyfxzhbptC85SVYZqovog/viewform?embedded=true"></iframe>
+    </div>
+  </div>
+
+  <section id="onas">
+    <h2>O nas</h2>
+    <p>Freeborn to przestrzeń dla tych, którzy wybierają wolność zamiast schematów. 
+    Tworzymy doświadczenia, które pozwalają przekraczać własne granice.</p>
+  </section>
+
+  <section id="jak">
+    <h2>Jak to działa?</h2>
+    <p>Dołącz do nas, a przygotujemy dla Ciebie przygodę, której nie zapomnisz. 
+    Od spływów kajakowych, po biwaki w dziczy i wyzwania survivalowe.</p>
+    <button class="btn" onclick="toggleForm()">Dołącz</button>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <div class="faq-item"><strong>Czy muszę mieć doświadczenie?</strong><br>Nie, wszystkiego nauczysz się z nami.</div>
+    <div class="faq-item"><strong>Co muszę zabrać?</strong><br>Podstawowy sprzęt survivalowy (namiot, śpiwór, latarka itp.).</div>
+    <div class="faq-item"><strong>Czy to bezpieczne?</strong><br>Tak, nasze przygody są zaplanowane i nadzorowane.</div>
+  </section>
+
+  <footer>
+    <p>Skontaktuj się z nami:</p>
+    <a href="mailto:biuro.freeborn@gmail.com">📧</a>
+    <a href="https://www.instagram.com/freeborn.official/" target="_blank">📷</a>
+  </footer>
+
+  <script>
+    function toggleForm() {
+      const form = document.getElementById('form-container');
+      form.style.display = (form.style.display === 'block') ? 'none' : 'block';
+      if (form.style.display === 'block') {
+        form.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
