@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freeborn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Logo -->
+  <header class="hero">
+    <img src="assets/logo.png" alt="Freeborn logo" class="logo">
+    <h1>Choose Free. Choose You.</h1>
+    <button id="joinBtn" class="cta-btn">Wybierz siebie</button>
+    <div id="countdown"></div>
+  </header>
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span id="closePopup" class="close-btn">&times;</span>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdHFRDKskzT244qEXUTXhnoJY7pZyyfxzhbptC85SVYZqovog/viewform?embedded=true"
+        width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Ładuję…</iframe>
+    </div>
+  </div>
+
+  <!-- O nas -->
+  <section id="onas">
+    <h2>O nas</h2>
+    <p>Freeborn to przestrzeń dla tych, którzy wybierają wolność zamiast schematów. Tworzymy doświadczenia, które pozwalają przekraczać własne granice.</p>
+  </section>
+
+  <!-- Jak to działa -->
+  <section id="jakto">
+    <h2>Jak to działa</h2>
+    <div class="steps">
+      <div class="step" id="step1">1. Dołącz</div>
+      <div class="step">2. Wybierz przygodę</div>
+      <div class="step">3. Baw się</div>
+      <div class="step">4. Podziel się swoją przygodą</div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+      <h3>Dlaczego prosicie o adres e-mail?</h3>
+      <div class="faq-answer">Twój e-mail pozwala nam wysłać Ci szczegóły przygody i ekskluzyjne informacje.</div>
+    </div>
+    <div class="faq-item">
+      <h3>Czemu nie ma cennika?</h3>
+      <div class="faq-answer">Cena zależy od rodzaju przygody. Otrzymasz ją po zapisaniu się.</div>
+    </div>
+    <div class="faq-item">
+      <h3>Czy muszę mieć doświadczenie survivalowe?</h3>
+      <div class="faq-answer">Nie – każdy może spróbować! Zadbamy o Twoje bezpieczeństwo.</div>
+    </div>
+    <div class="faq-item">
+      <h3>Co jeśli nie mam własnego sprzętu?</h3>
+      <div class="faq-answer">Możesz wypożyczyć go u nas lub dostać listę rekomendacji.</div>
+    </div>
+    <div class="faq-item">
+      <h3>Czy mogę nagrywać swoje przygody?</h3>
+      <div class="faq-answer">Tak! Zachęcamy do dokumentowania doświadczeń.</div>
+    </div>
+  </section>
+
+  <!-- Stopka -->
+  <footer>
+    <p>freeborn 2025</p>
+    <a href="mailto:biuro.freeborn@gmail.com" target="_blank" aria-label="Email">
+      ✉️
+    </a>
+    <a href="https://www.instagram.com/freeborn.official/" target="_blank" aria-label="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+        <path d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5ZM4.5 7.75c0-1.793 1.457-3.25 3.25-3.25h8.5c1.793 0 3.25 1.457 3.25 3.25v8.5c0 1.793-1.457 3.25-3.25 3.25h-8.5c-1.793 0-3.25-1.457-3.25-3.25v-8.5Zm12.25-.75a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm-5.75 1a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z"/>
+      </svg>
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
