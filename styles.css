@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: url('assets/stars-desktop.webp') no-repeat center center;
-  background-size: contain;
+  background-size: cover;
   background-attachment: scroll; /* domyślnie scroll, bez fixed */
   color: white;
   overflow-x: hidden;
