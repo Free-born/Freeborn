@@ -4,18 +4,16 @@ body {
   font-family: 'Poppins', sans-serif;
   background: url('assets/stars-desktop.webp') no-repeat center center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll; /* domyślnie scroll, bez fixed */
   color: white;
   overflow-x: hidden;
   text-align: center;
 }
 
-/* ✅ Naprawa tła na telefonach */
-@media (max-width: 768px) {
+/* ✅ Efekt paralaksy tylko na komputerze (gdzie działa poprawnie) */
+@media (min-width: 1025px) {
   body {
-    background: url('assets/stars-desktop.webp') no-repeat center center;
-    background-size: cover;
-    background-attachment: scroll; /* zamiast fixed */
+    background-attachment: fixed;
   }
 }
 
