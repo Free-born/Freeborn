@@ -6,18 +6,16 @@ body {
   overflow-x: hidden;
   text-align: center;
 
-  /* 🖥️ Tło dla komputerów (duża jakość) */
+  /* 🖥️ Tło dla komputerów */
   background-image: url('assets/stars-desktop.webp');
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: scroll; /* zamiast fixed - unika zniekształceń */
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-position: center top;
+  background-size: contain; /* 👈 zmiana z 'cover' na 'contain' — mniejsze rozmycie */
+  background-attachment: fixed;
+  background-color: black; /* gdyby tło nie pokryło całego ekranu */
+  image-rendering: high-quality;
 }
+
 
 /* Logo */
 .logo {
@@ -182,13 +180,12 @@ footer svg {
 /* 📱 Automatyczne przełączanie na ostrzejsze tło mobilne */
 @media (max-width: 768px) {
   body {
-    background-image: url('assets/space-mobile.webp'); /* 🔹 wersja zoptymalizowana */
-    background-attachment: scroll;
-    background-size: cover;
+    background-image: url('assets/space-mobile.webp'); /* 👈 mniejsza, ostra wersja */
+    background-repeat: no-repeat;
     background-position: center top;
-    image-rendering: auto;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    background-color: black;
+    image-rendering: high-quality;
   }
 }
