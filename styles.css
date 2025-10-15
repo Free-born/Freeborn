@@ -7,7 +7,7 @@ body {
   text-align: center;
 
   /* Tło ustawione bez 'fixed' dla lepszej jakości na telefonach */
-  background-image: url('assets/space-4984262.jpg');
+  background-image: url('assets/stars-desktop.webp');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -181,7 +181,7 @@ footer svg {
 /* 📱 Poprawa jakości tła na urządzeniach mobilnych */
 @media (max-width: 768px) {
   body {
-    background-image: url('assets/space-4984262.jpg');
+    background-image: url('assets/stars-desktop.webp');
     background-attachment: scroll; /* unika błędu z 'fixed' */
     background-size: cover;
     background-position: center top;
