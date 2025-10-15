@@ -2,34 +2,21 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: url('assets/stars-desktop.webp') no-repeat center center;
-  background-size: cover;
-  background-attachment: scroll; /* naprawia rozmycie na telefonach */
   color: white;
   overflow-x: hidden;
   text-align: center;
-  position: relative;
-}
 
-/* półprzezroczysty filtr, który maskuje ewentualne piksele i poprawia kontrast */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* można zmienić np. na 0.3 jeśli za ciemne */
-  z-index: -1;
-}
-
-/* wersja mobilna – możesz użyć innego pliku tła, np. stars-mobile.webp */
-@media (max-width: 768px) {
-  body {
-    background: url('assets/stars-desktop.webp') no-repeat center center;
-    background-size: cover;
-    background-attachment: scroll; /* kluczowe – usuwa rozmycie */
-  }
+  /* Tło ustawione bez 'fixed' dla lepszej jakości na telefonach */
+  background-image: url('assets/space-4984262.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll; /* zamiast fixed - unika zniekształceń */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 /* Logo */
@@ -189,5 +176,18 @@ footer svg {
   }
   .step {
     width: 80%;
+  }
+}
+/* 📱 Poprawa jakości tła na urządzeniach mobilnych */
+@media (max-width: 768px) {
+  body {
+    background-image: url('assets/space-4984262.jpg');
+    background-attachment: scroll; /* unika błędu z 'fixed' */
+    background-size: cover;
+    background-position: center top;
+    image-rendering: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
   }
 }
