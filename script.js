@@ -24,7 +24,7 @@ document.querySelectorAll('.faq-item').forEach(item => {
 
 // Countdown
 const countdownEl = document.getElementById('countdown');
-const targetDate = new Date('December 30, 2025 20:00:00').getTime();
+const targetDate = new Date('May 01, 2026 10:00:00').getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
